@@ -1,0 +1,5 @@
+<ul id="produtos" phx-update="prepend">
+  <%= for produto <- @produtos do %>
+    <%= live_component @socket, LivetestWeb.ProdutoLive.ProdutoComponent, id: produto.id, produto: produto %>
+  <% end %>
+</ul>
